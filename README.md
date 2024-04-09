@@ -858,5 +858,51 @@ Finally, we’ve created two functions called “prevSlide” and “nextSlide�
   - colour schemes/colour coding
   - Having consistent symbols sizes
   - Having consistent spacing between your symbols
-  - Having
-* 
+  
+  # For loops
+  > A for loop in JavaScript is a loop statement that allows you to execute a block of code repeatedly for a fixed number of times. The for loop consists of three parts: initialization, condition, and increment/decrement. Here's the basic syntax of a for loop:
+
+for (initialization; condition; increment/decrement) {
+  // code to be executed
+}
+The initialization part initializes the loop counter and is executed only once at the beginning of the loop.
+The condition part specifies the condition for continuing the loop and is evaluated before each iteration of the loop. If the condition is true, the loop continues. If the condition is false, the loop terminates.
+The increment/decrement part updates the loop counter after each iteration of the loop.
+Here’s an example of a for loop that counts from 0 to 4:
+
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+In this example, the initialization part sets the variable i to 0, the condition part checks if i is less than 5, and the increment part adds 1 to i after each iteration of the loop. The loop will execute 5 times, with i taking on the values of 0, 1, 2, 3, and 4, and each value of i will be printed to the console.
+
+You can also use a for loop to iterate over an array:
+
+const numbers = [1, 2, 3, 4, 5];
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}
+In this example, the initialization part sets the variable i to 0, the condition part checks if i is less than the length of the numbers array and the increment part adds 1 to i after each iteration of the loop. The loop will execute 5 times, with i taking on the values of 0, 1, 2, 3, and 4, and each value of numbers[i] will be printed to the console.
+
+In summary, a for loop is a fundamental loop statement in JavaScript that allows you to execute a block of code repeatedly for a fixed number of times. It consists of three parts: initialization, condition, and increment/decrement. You can use a for loop to iterate over an array or any other iterable object.
+> Javascript supports different kinds of loops:
+- For-loops through a block of code a numbern of times.
+- For/in- loops through the properties of an object.
+- For/of- loops through the values of an iterable object.
+- while- loops through a block of code while a specified condition is true
+- do/while- also loops through a block of code while a specified is true.
+* Also a for loop syntax
+  > for(statement 1, statement 2, statement 3) {
+  // code block to be executed
+  }
+  > Statement 1 is executed(one time) before the execution of the code block
+  > Statement 2 defines the condition for executing the code block
+  > Statement 3 is executed (every time) after the code block has been executed.
+
+* Statement 1
+  > Normally you will use statement 1 to initialize the variable used in the loop(i=0)
+  > Statement 1 is optional. You can initiate many values in statement 1( seperated by comma):
+  * Example:
+    > for(i=0,len=Cars.length,text="";i<len;i++){
+          text+= Cars[i]+"<br>";
+      }
+    > And you can omit statement 1( like when your values are set before the loop start)
