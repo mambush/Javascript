@@ -754,3 +754,109 @@ When a webpage has completed loading in the web browser, the load event takes pl
 <h1> This is a heading</h1>
 <p> This is a paragraph of text</p>
 </body>
+
+## DAY 4
+# SLIDESHOWS
+
+> A slideshow is a popular web design element that allows you to display multiple images or other media content interactively and engagingly.
+ ## Step 1: Create the HTML Markup
+The first step in creating a slideshow is to create the HTML markup that will contain the images or other media content. Typically, this will involve creating a container element that will hold the images and any associated navigation controls. Here’s an example of a basic HTML markup for a slideshow:
+
+<div class="slideshow-container">
+  <div class="slide">
+    <img src="image-1.jpg" alt="Image 1">
+  </div>
+  <div class="slide">
+    <img src="image-2.jpg" alt="Image 2">
+  </div>
+  <div class="slide">
+    <img src="image-3.jpg" alt="Image 3">
+  </div>
+  <a class="prev" onclick="prevSlide()">&#10094;</a>
+  <a class="next" onclick="nextSlide()">&#10095;</a>
+</div>
+## Step 2
+In this example, we’ve created a container element with the class name “slideshow-container”. Within this container, we’ve added three slide elements, each of which contains an image element with a source and an alt attribute. We’ve also included two navigation buttons with the class names “prev” and “next”, which will allow the user to move forward or backward through the slides.
+
+Once you’ve created the HTML markup, the next step is to style the slideshow with CSS. This will involve setting the dimensions of the container element, positioning the slide elements, and hiding all but the first slide element. Here’s an example of some basic CSS that will accomplish these tasks:
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}.slide:first-child {
+  display: block;
+}.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+In this example, we’ve set the position of the slideshow container to “relative” and its height to 500 pixels. We’ve also set the position of the slide elements to “absolute” and their width and height to 100%. The “display: none” property will hide all of the slide elements except for the first one, which we’ve displayed using the “first-child” selector.
+
+We’ve also styled the navigation buttons with the class names “prev” and “next”. We’ve positioned them to the middle of the container vertically and set their font size, color, and padding. We’ve also given them a border radius to make them more visually appealing.
+
+## Step 3: Add JavaScript Functionality
+The final step in creating a slideshow is to add the JavaScript functionality that will allow the user to navigate through the slides using the navigation buttons. This will involve writing two functions: one to move to the next slide and another to move to the previous slide. Here’s an example of the JavaScript code that will accomplish this:
+
+let slideIndex = 1;
+showSlides(slideIndex);function plusSlide(n) {
+  showSlides(slideIndex += n);
+}function showSlides(n) {
+  let i;
+  const slides = document.getElementsByClassName("slide");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}function prevSlide() {
+  plusSlide(-1);
+}function nextSlide() {
+  plusSlide(1);
+}
+In this example, we’ve created a variable called “slideIndex” and set its initial value to 1. We’ve also called the “showSlides” function with this initial value to display the first slide.
+
+We’ve then created a function called “plusSlide” that takes a parameter “n” and adds it to the “slideIndex” variable. This function will be called by the “prevSlide” and “nextSlide” functions to move to the previous or next slide.
+
+The “showSlides” function takes the “slideIndex” variable and uses it to display the corresponding slide element while hiding all the others. We’ve also included logic to ensure that the “slideIndex” variable always stays within the range of the total number of slides.
+
+Finally, we’ve created two functions called “prevSlide” and “nextSlide” that call the “plusSlide” function with the appropriate parameter to move to the previous or next slide.
+
+## Week 4
+# Day 1- flowcharts and loops
+> Flowchart are used to illustrate algorithms in order to aid  in the visualisation of a program.
+> flowchart are to be read to bottom and left to right in order to follow an algorithm logic from start to finish. Below is an outline of symbols used in flowcharts.
+
+* Terminal- used to represent the start and End of a program with the keyword BEGIN and START
+* Process- An instruction that is to be carried out by the program
+* Arrow- Indicates the flow of the algorithm pathways
+* Decision- used to split the flowchart sequence into multiple paths in order to represent selection and Repetition.
+* Input/output- used to represent data entry by a user or the display of data by the program.
+* Subprogram-References another program within the program.
+
+  > To make a flow chart your flow chart interesting you can use different colours for your symbol and/or labels:
+  - Using appropriate symbols
+  - flow direction that is inconsistent
+  - colour schemes/colour coding
+  - Having consistent symbols sizes
+  - Having consistent spacing between your symbols
+  - Having
+* 
